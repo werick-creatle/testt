@@ -1,29 +1,59 @@
 import java.util.Scanner;
-public class Main{
-    public static void main(String[] args){
-        Scanner ker = new Scanner(System.in);
-        System.out.println("faça suas compras");
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Faça suas compras");
         System.out.println("");
-        System.out.println("100 = cahorro Quente R% 1,20");
-        System.out.println("101 = bauru Simples R% 1,30");
-        System.out.println("102 = buru Com Ovo R% 1,50");
-        System.out.println("103 = hamburguer R% 1,20");
-        System.out.println("104 = cheeburguer R% 1,30");
-        System.out.println("105 = refrigerate R% 1,00");
+        System.out.println("100 = Cachorro Quente R$ 1,20");
+        System.out.println("101 = Bauru Simples R$ 1,30");
+        System.out.println("102 = Bauru com Ovo R$ 1,50");
+        System.out.println("103 = Hambúrguer R$ 1,20");
+        System.out.println("104 = Cheeseburguer R$ 1,30");
+        System.out.println("105 = Refrigerante R$ 1,00");
         System.out.println("");
-        System.out.println("Digite o codigo dos produtos uque deseja comprar");
-        
-        float cahorroQuente = 100;
-        float bauruSimples = 101;
-        float buruComOvo = 102;
-        float hamburguer = 103;
-        float cheeburguer = 104;
-        float refrigerate = 105;
-        
-        int reps = 1;
-        
-        do 
-        
-        
+
+        float total = 0;
+        int e;
+
+        do {
+            System.out.print("Digite o código do produto que deseja comprar (ou 0 para finalizar): ");
+            e = ler.nextInt();
+
+            switch (e) {
+                case 100:
+                    total += 1.20;
+                    System.out.println("Cachorro Quente adicionado. Preço: R$ 1,20");
+                    break;
+                case 101:
+                    total += 1.30;
+                    System.out.println("Bauru Simples adicionado. Preço: R$ 1,30");
+                    break;
+                case 102:
+                    total += 1.50;
+                    System.out.println("Bauru com Ovo adicionado. Preço: R$ 1,50");
+                    break;
+                case 103:
+                    total += 1.20;
+                    System.out.println("Hambúrguer adicionado. Preço: R$ 1,20");
+                    break;
+                case 104:
+                    total += 1.30;
+                    System.out.println("Cheeseburguer adicionado. Preço: R$ 1,30");
+                    break;
+                case 105:
+                    total += 1.00;
+                    System.out.println("Refrigerante adicionado. Preço: R$ 1,00");
+                    break;
+                case 0:
+                    System.out.println("Finalizando suas compras...");
+                    break;
+                default:
+                    System.out.println("Código inválido. Tente novamente.");
+            }
+        } while (e != 0);
+
+        System.out.printf("O total da sua compra é: R$ %.2f%n", total);
+        ler.close();
     }
 }
