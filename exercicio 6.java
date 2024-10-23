@@ -7,7 +7,7 @@ public class Main {
     }
 
     public static void maiorValor() {
-        int[] vetor = { 1, 2, 3, 4 };
+        int[] vetor = { 2, 4, 6, 8 };
         int maior = 0;
         for (int i = 0; i < vetor.length; i++) {
             if (maior < vetor[i]) {
