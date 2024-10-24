@@ -1,8 +1,8 @@
-package atv_7.ex_8;
+package atv_8.ex_1;
+
 public class Carro {
     String marca;
     String modelo;
     double veloMaxima;
     String cor;
 }
-
