@@ -1,15 +1,17 @@
 package atv_7.ex_6;
+
 // exercico 6
 import java.util.Scanner;
+
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
         System.out.println("Digite o tamanho do vetor");
         int tamanho = ler.nextInt();
         int[] vetor = new int[tamanho];
-        for (int i = 0; i < tamanho; i++){
-        System.out.println("Dite o valor da posição " + i + " do vetor");
-        vetor [i] = ler.nextInt();
+        for (int i = 0; i < tamanho; i++) {
+            System.out.println("Dite o valor da posição " + i + " do vetor");
+            vetor[i] = ler.nextInt();
         }
         int maior = maiorNumero(vetor);
         System.out.println("O maior número é: " + maior);
