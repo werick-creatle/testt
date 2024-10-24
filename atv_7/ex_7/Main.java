@@ -1,6 +1,8 @@
+package atv_7.ex_7;
 
-// esercicio 7:
+// exercicio 7:
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         calcularFatorial();
